@@ -28,8 +28,20 @@ dependencies = [
   "pytest>=8.3.5",
 ]
 
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
 [tool.uv.sources]
 llms-from-scratch = { workspace = true }
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
 
 [dependency-groups]
 dev = [
